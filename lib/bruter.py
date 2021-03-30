@@ -2,6 +2,9 @@
 # Author: Mohamed
 # Description: Bruter
 
+
+import os
+import webbrowser
 import queue
 import time
 import threading
@@ -12,7 +15,7 @@ from lib.proxy_manager import ProxyManager
 from lib.password_manager import PasswordManager
 from lib.const import max_time_to_wait, max_bots_per_proxy
 
-
+# create class Bruter(object):
 class Bruter(object):
     def __init__(self, username: str, threads: int, passlist_path: str):
 
