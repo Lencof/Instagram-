@@ -2,7 +2,9 @@
 # Author: Mohamed
 # Description: Browser
 
+import webbrowser 
 from time import time
+from datetime import datetime
 from random import choice
 from requests import Session
 from datetime import datetime
@@ -11,7 +13,7 @@ from .const import browser_data, response_codes, fetch_time, user_agents, debug
 
 from lib import proxy
 
-
+# create class Browser(object):
 class Browser(object):
 
     account_exists = None
@@ -62,7 +64,7 @@ class Browser(object):
             self.proxy.incr_success()
             return resp
         except:
-            pass
+            pass # an empty block
 
     def check_exists(self, response):
         if "user" in response:
