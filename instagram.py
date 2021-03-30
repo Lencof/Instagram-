@@ -17,7 +17,7 @@ from platform import python_version
 from lib.const import credentials, modes
 from argparse import ArgumentParser, ArgumentTypeError
 
-
+# create class Engine(object):
 class Engine(object):
     def __init__(self, username, threads, passlist_path, is_color):
         self.resume = False
@@ -281,4 +281,5 @@ if __name__ == "__main__":
         print("[!] Please use Python 3")
         exit()
 
-    main()
+    main() # exit()
+    
