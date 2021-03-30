@@ -13,9 +13,10 @@ from os.path import exists as path
 # from csv import DictWriter, DictReader
 import hashlib
 import time
+import datetime
 import typing
 
-
+# create class DatabaseWrapper:
 class DatabaseWrapper:
     def __init__(self, db_name):
         self.db_name = db_path
@@ -129,7 +130,7 @@ class Session(DatabaseWrapper):
                 args=[self.fingerprint],
             )
 
-
+# create Proxy(DatabaseWrapper):
 class Proxy(DatabaseWrapper):
     def __init__(self):
         super().__init__(db_path)
@@ -412,4 +413,4 @@ class Proxy(DatabaseWrapper):
             data["max"] = row[3]
             data["q1"] = self.calc_q1()
 
-        return data
+        return data 
